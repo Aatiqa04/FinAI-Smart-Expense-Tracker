@@ -1,20 +1,109 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# FinAI - Smart Expense Tracker
 
-# Run and deploy your AI Studio app
+A modern, AI-powered expense tracking application built with React and TypeScript. Features intelligent financial analysis, spending predictions, and personalized savings recommendations powered by OpenAI.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+- **Dashboard** - Visual overview of income, expenses, and net balance with interactive charts
+- **Transaction Management** - Add, view, and manage income/expense entries
+- **AI Insights** - Get intelligent analysis of spending patterns and savings suggestions
+- **Executive Reports** - Generate detailed AI-powered financial audit reports
+- **Responsive Design** - Works seamlessly on desktop and mobile devices
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **OpenAI API** - AI-powered insights and reports
+- **Recharts** - Data visualization
+- **Lucide React** - Icons
+- **Tailwind CSS** - Styling
 
+## Project Structure
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```
+src/
+├── components/
+│   ├── AIInsights.tsx        # AI financial advisor panel
+│   ├── Dashboard.tsx         # Charts and spending overview
+│   ├── ExpenseForm.tsx       # Add transaction form
+│   ├── FormattedReport.tsx   # Markdown report renderer
+│   ├── FormModal.tsx         # Modal wrapper for forms
+│   ├── HealthSynopsis.tsx    # Report generation card
+│   ├── MobileHeader.tsx      # Mobile navigation header
+│   ├── RecentHistory.tsx     # Recent transactions list
+│   ├── ReportView.tsx        # Full report display
+│   ├── Sidebar.tsx           # Desktop navigation
+│   ├── SidebarLink.tsx       # Navigation link component
+│   ├── SummaryCard.tsx       # Summary stat cards
+│   └── TransactionsView.tsx  # Full transaction ledger
+├── services/
+│   └── aiService.ts          # OpenAI API integration
+├── types/
+│   └── index.ts              # TypeScript type definitions
+├── utils/
+│   └── formatters.ts         # Text formatting utilities
+├── App.tsx                   # Main app component
+└── main.tsx                  # Entry point
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- OpenAI API key
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd FinAI-Smart-Expense-Tracker
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Configure your API key in `.env.local`:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open http://localhost:3000 in your browser
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+
+## AI Features
+
+### AI Insights
+Analyzes your transaction history to provide:
+- Spending pattern summary
+- Next month predictions
+- Actionable savings suggestions
+- Financial health score (0-100)
+
+### Executive Reports
+Generates detailed markdown reports including:
+- Executive summary
+- Spending analysis by category
+- Income efficiency metrics
+- Strategic recommendations
+
+## License
+
+MIT
